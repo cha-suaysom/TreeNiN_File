@@ -1,0 +1,31 @@
+stages:
+  - name: TreeNiN
+    dependencies: [init]
+    scheduler:
+      scheduler_type: singlestep-stage
+      parameters:
+        parone: {stages: init, output: input_url, unwrap: true}
+        publish_result: '{workdir}/TreeNiN_hd50.pkl'
+      step:
+        process:
+          process_type: 'interpolated-script-cmd'
+          interpreter: bash
+          script: | 
+            apt-get update
+            apt-get install -y unzip
+            wget {parone}
+            unzip test_top_tag_reference_dataset_kt_1200000_Njets_.zip
+            mv test_top_tag_reference_dataset_kt_1200000_Njets_.pkl data/preprocessed_trees/test_top_tag_reference_dataset_kt_1200000_Njets_.pkl
+            python MLWorkflow.py 0 9
+            python3 saveProb.py
+            cp top_reference_dataset/outProb/TreeNiN_hd50.pkl {publish_result}
+        publisher:
+          publisher_type: interpolated-pub
+          publish:
+            publish_data: publish_data
+        environment:
+          environment_type: 'docker-encapsulated'
+          image: smacaluso/treenin
+          imagetag: 1.0.0
+          resources:
+          - kubernetes_uid: 500
