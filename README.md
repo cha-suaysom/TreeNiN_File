@@ -18,8 +18,9 @@ First clone this repository with
 
 Next we set up virtual environment and activate it
 
-`virtualenv ~/.virtualenvs/yadage
-source ~/.virtualenvs/yadage/bin/activate`
+`virtualenv ~/.virtualenvs/yadage`
+
+`source ~/.virtualenvs/yadage/bin/activate`
 
 Next install `yadage` with `pip` or `pip3` note that there could be extra requirements as seen in [here](https://yadage.readthedocs.io/en/latest/introduction.html).
 
@@ -46,6 +47,9 @@ Note that the first part of command clear the workspace and give appropriate per
 
 **Note** The input data in `input.yml` file is actually not used.
 
+### Result
+
+The result is saved into `TreeNiN_hd50.pkl` which saved the probabilities of each of the 9 models for each jet.
 
 
 
