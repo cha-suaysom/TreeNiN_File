@@ -49,9 +49,11 @@ Note that the first part of command clear the workspace and give appropriate per
 
 ### Result
 
-The result is saved into `TreeNiN_hd50.pkl` which saved the probabilities of each of the 9 models for each jet.
+The result is saved into `_run/TreeNiN/TreeNiN_hd50.pkl` which saved the probabilities of each of the 9 models for each jet.
 
+### Debugging
 
+If the workflow  fails, the log can be seen in `_run/TreeNiN/_packtivity/` which has logs for each step in the workflow and also in the bash script.
 
 
 
