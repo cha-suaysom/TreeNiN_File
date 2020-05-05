@@ -5,7 +5,7 @@ stages:
       scheduler_type: singlestep-stage
       parameters:
         parone: {stages: init, output: input_url, unwrap: true}
-        publish_result: '{workdir}/TreeNiN_hd50.pkl'
+        publish_result: '_run/TreeNiN/TreeNiN_hd50.pkl'
       step:
         process:
           process_type: 'interpolated-script-cmd'
