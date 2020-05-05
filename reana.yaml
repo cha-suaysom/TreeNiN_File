@@ -1,0 +1,7 @@
+version: 0.6.0
+workflow:
+  type: yadage
+  file: workflow/workflow.yml
+outputs:
+  files:
+   - _run/TreeNiN/TreeNiN_hd50.pkl
