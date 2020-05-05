@@ -13,7 +13,7 @@ stages:
           script: | 
             apt-get update
             apt-get install -y unzip
-            wget {parone}
+            wget https://github.com/cha-suaysom/reana-demo-treenin/raw/master/test_top_tag_reference_dataset_kt_1200000_Njets_.zip --accept-metadir
             unzip test_top_tag_reference_dataset_kt_1200000_Njets_.zip
             mv test_top_tag_reference_dataset_kt_1200000_Njets_.pkl data/preprocessed_trees/test_top_tag_reference_dataset_kt_1200000_Njets_.pkl
             python MLWorkflow.py 0 9
