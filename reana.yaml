@@ -13,7 +13,7 @@ workflow:
       - name: run-workflow
         environment: 'lukasheinrich/yadage'
         commands:
-        - rm -rf _run && mkdir -p _run && chmod -R a+rwx _run && yadage-run _run workflow/workflow.yml workflow/input.yml -p input_url=https://github.com/cha-suaysom/reana-demo-treenin/raw/master/test_top_tag_reference_dataset_kt_1200000_Njets_.zip --accept-metadir
+        - rm -rf _run && mkdir -p _run && chmod -R a+rwx _run && yadage-run _run workflow/workflow.yml -p input_url=https://github.com/cha-suaysom/reana-demo-treenin/raw/master/test_top_tag_reference_dataset_kt_1200000_Njets_.zip
        
 outputs:
   files:
