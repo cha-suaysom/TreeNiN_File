@@ -1,20 +1,7 @@
 version: 0.6.0
-inputs:
-  files:
-    - workflow/workflow.yml
-workflow:
-  type: serial
-  specification:
-    steps:
-      - name: install-yadage
-        environment: 'lukasheinrich/yadage'
-        commands:
-        - pip install yadage
-      - name: run-workflow
-        environment: 'lukasheinrich/yadage'
-        commands:
-        - rm -rf _run && mkdir -p _run && chmod -R a+rwx _run && yadage-run _run workflow/workflow.yml -p input_url=https://github.com/cha-suaysom/reana-demo-treenin/raw/master/test_top_tag_reference_dataset_kt_1200000_Njets_.zip
-       
-outputs:
-  files:
-   - _run/TreeNiN/TreeNiN_hd50.pkl
+ workflow:
+   type: yadage
+   file: workflow/workflow.yml
+ outputs:
+   files:
+    - top_reference_dataset/outProb/TreeNiN_hd50.pkl
