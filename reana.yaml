@@ -4,4 +4,4 @@ version: 0.6.0
    file: workflow/workflow.yml
  outputs:
    files:
-    - top_reference_dataset/outProb/TreeNiN_hd50.pkl
+    - TreeNiN/top_reference_dataset/outProb/TreeNiN_hd50.pkl
