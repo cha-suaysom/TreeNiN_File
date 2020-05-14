@@ -21,7 +21,7 @@ stages:
         publisher:
           publisher_type: interpolated-pub
           publish:
-            publish_data: publish_data
+            publish_data: '{workdir}/top_reference_dataset/outProb/TreeNiN_hd50.pkl'
         environment:
           environment_type: 'docker-encapsulated'
           image: smacaluso/treenin
