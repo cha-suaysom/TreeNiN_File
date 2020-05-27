@@ -4,6 +4,20 @@ This repository contains a yadage workflow running the [TreeNiN](https://github.
 
 ## Quickstart
 
+### Running on REANA
+
+Follow steps given [here for connecting to REANA] (https://github.com/reanahub/reana-demo-helloworld#running-the-example-on-reana-cloud)
+
+`reana-client run -w treenin -f reana.yaml`
+
+To check the status of the workflow:
+`reana-client status -w treenin`
+
+To download the results: 
+`reana-client download -w treenin`
+
+
+
 ### Computing Environment
 
 If your environment does not already have `yadage` installed, I suggest using free Google Cloud Shell since it already has the correct software versions so that `yadage` can be installed quickly.
